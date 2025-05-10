@@ -11,6 +11,7 @@ public class MyWebProjectApplication {
 
 	@GetMapping("/message")
 	public String getMessage(){
+		System.out.println("This is a message from your web project");
 		return "Hi Vishakha!! This should sync to Jenkins";
 	}
 
