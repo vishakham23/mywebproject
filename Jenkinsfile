@@ -13,7 +13,7 @@ pipeline{
         stage('Build docker image'){
             steps{
                 bat 'docker build -t vishwell/mywebproject:1.0 .'
-
+                // bat 'docker build -t vishwell/mywebproject:latest.'
             }
         }
         stage('push docker image to docker hub'){
@@ -23,7 +23,7 @@ pipeline{
                    bat 'docker login -u vishwell -p %dockerhubpwd%'
                 }
                 bat 'docker push vishwell/mywebproject:1.0'
-                bat 'docker push vishwell/mywebproject:latest'
+               // bat 'docker push vishwell/mywebproject:latest'
             }
         }
 
