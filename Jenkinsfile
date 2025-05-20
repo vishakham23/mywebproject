@@ -22,7 +22,8 @@ pipeline{
                  // sh 'docker login -u vishwell -p ${dockerhubpwd}'
                    bat 'docker login -u vishwell -p %dockerhubpwd%'
                 }
-                bat 'docker push vishwell/mywebproject'
+                bat 'docker push vishwell/mywebproject:1.0'
+                bat 'docker push vishwell/mywebproject:latest'
             }
         }
 
